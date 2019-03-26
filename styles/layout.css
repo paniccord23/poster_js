@@ -43,6 +43,10 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+.duck, .giraffe, .hole-first, .hole-second, .hole-eyes {
+  position: relative;
+  z-index: 3;
+}
 
 .second-part {
   background-image: repeating-linear-gradient(90deg, #000 0, #000 22px, #F4D80F 22px, #F4D80F 44px, #000 44px, #000 68px, #F4D80F 68px, #F4D80F 90px);
@@ -107,17 +111,25 @@ html, body {
   stroke:#F4D80F;
 }
 
-.anim, .anim svg {
-  position: relative;
-  top: -1900px;
-  width: 100%;
-  height: 100%;
-}
-.anim path {
-  stroke-width: 5;
-}
+/* letters */
 
-
+.letter-wrapper {
+  position: absolute;
+  top: 460px;
+  left: -80px;
+  width: 700px;
+}
+.letter {
+  position: absolute;
+  z-index: 7;
+}
+.line {
+  position: absolute;
+  z-index: 7;
+  left: 68px;
+  top: 977px;
+  width: 54px;
+}
 /* media */
 @media (max-width: 425px) {
 .main-screen {
@@ -130,6 +142,30 @@ html, body {
   }
   .main-screen h2 {
     font-size: 18px;
+  }
+  .hole-first {
+    top: -400px;
+    left: -90px;
+    width: 50px;
+  }
+  .hole-second {
+    top: -133px;
+    left: 80px;
+    width: 50px;
+  }
+  .duck {
+    top: -198px;
+    left: 104px;
+    width: 50px;
+  }
+  .giraffe {
+    left: 60px;
+    width: 70px;
+  }
+  .hole-eyes {
+    top: -40px;
+    left: -13px;
+    width: 55px;
   }
   .second-part {
     height: 812px;
@@ -172,6 +208,30 @@ html, body {
   .main-screen h2 {
     font-size: 22px;
   }
+  .hole-first {
+    top: -400px;
+    left: -90px;
+    width: 50px;
+  }
+  .hole-second {
+    top: -133px;
+    left: 80px;
+    width: 50px;
+  }
+  .duck {
+    top: -198px;
+    left: 104px;
+    width: 50px;
+  }
+  .giraffe {
+    left: 60px;
+    width: 70px;
+  }
+  .hole-eyes {
+    top: -40px;
+    left: -13px;
+    width: 55px;
+  }
   .second-part h3 {
     padding: 0;
     line-height: 35px;
@@ -193,6 +253,13 @@ html, body {
     padding-left: 15%;
     width: 500px;
   }
+  .polymorpf {
+    height: 1100px;
+  }
+  .morpf svg {
+    top: 2200px;
+    left: -55%;
+  }
 }
 @media (min-width: 768px) {
   .main-screen h1 {
@@ -200,6 +267,26 @@ html, body {
   }
   .main-screen h2 {
     font-size: 27px;
+  }
+  .hole-first {
+    top: -480px;
+    left: -190px;
+    width: 50px;
+  }
+  .duck {
+    top: -300px;
+    left: 104px;
+    width: 70px;
+  }
+  .giraffe {
+    left: 130px;
+    width: 120px;
+  }
+  .hole-second {
+    left: 220px;
+  }
+  .hole-eyes {
+    top: -117px;
   }
   .second-part {
     height: 800px;
@@ -250,9 +337,10 @@ html, body {
     line-height: 45px;
   }
   .polymorpf {
-    height: 1720px;
+    height: 1750px;
   }
   .morpf svg {
     width: 145%;
+    left: -50%;
   }
 }
