@@ -1,4 +1,3 @@
-
 var morpfing = anime({
   targets: '.polymorpf',
   points: [

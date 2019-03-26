@@ -22,6 +22,18 @@ html, body {
   height: 800px;
   text-align: center;
 }
+.line {
+  margin-top: -150px;
+  z-index: 11;
+  position: absolute;
+  left: -10%;
+  top: 10%;
+  width: 110%;
+}
+.second-line {
+  position: relative;
+  z-index: 12;
+}
 .main-screen h1 {
   padding-top: 290px;
   font-size: 65px;
@@ -78,10 +90,27 @@ html, body {
   line-height: 35px;
   padding-left: 180px;
 }
+.line {
+  position: absolute;
+  z-index: 7;
+  left: 68px;
+  top: 977px;
+  width: 54px;
+}
 .about {
   background-color: #000;
   padding: 200px 0 0 120px;
   height: 600px;
+}
+.eye-small {
+  position: relative;
+  left: 10%;
+}
+.eye-one {
+  position: relative;
+  width: 3%;
+  top: -100px;
+  left: 60%;
 }
 .about article {
   font-family: 'Roboto', sans-serif;
@@ -103,12 +132,21 @@ html, body {
   height: 1000px;
     background-image: repeating-linear-gradient(90deg, #000 0, #000 22px, #fff 22px, #fff 44px, #000 44px, #000 68px, #fff 68px, #fff 90px);
 }
+.static-morpf svg  {
+  display: none;
+}
 .morpf svg {
   position: absolute;
   top: 1670px;
   left: -300px;
   width: 150%;
   stroke:#F4D80F;
+}
+.static-morpf img  {
+  position: relative;
+  top: -1300px;
+  left: -123px;
+  width: 150%;
 }
 
 /* letters */
@@ -123,17 +161,14 @@ html, body {
   position: absolute;
   z-index: 7;
 }
-.line {
-  position: absolute;
-  z-index: 7;
-  left: 68px;
-  top: 977px;
-  width: 54px;
-}
+
 /* media */
 @media (max-width: 425px) {
 .main-screen {
   height: 812px;
+  }
+.second-line {
+    display: none;
   }
   .main-screen h1 {
     padding-top: 210px;
@@ -195,9 +230,17 @@ html, body {
     width: 360px;
     font-size: 18px;
   }
+  .polymorpf {
+    height: 1449px;
+  }
   .morpf svg {
-    top: 2500px;
-    left: -50%;
+    display: none;
+  }
+  .letter-wrapper {
+    position: absolute;
+    top: 460px;
+    left: -409px;
+    width: 700px;
   }
 }
 
@@ -256,6 +299,9 @@ html, body {
   .polymorpf {
     height: 1100px;
   }
+  .static-morpf img  {
+    display: none;
+  }
   .morpf svg {
     top: 2200px;
     left: -55%;
@@ -264,6 +310,9 @@ html, body {
 @media (min-width: 768px) {
   .main-screen h1 {
     font-size: 55px;
+  }
+  .second-line {
+    top: -3680px;
   }
   .main-screen h2 {
     font-size: 27px;
@@ -301,18 +350,41 @@ html, body {
     padding-left: 18%;
     width: 525px;
   }
+  .eye-one {
+    width: 7%;
+    left: 72%;
+  }
+  .eye-small {
+    left: 16%;
+  }
   .morpf svg {
     width: 130%;
     top: 2420px;
     left: -40%;
   }
   .polymorpf {
-    height: 1264px;
+    height: 1475px
+  }
+  .static-morpf img  {
+    display: none;
+  }
+  .letter-wrapper {
+    top: 388px;
+    left: -235px;
   }
 }
 @media (min-width: 1024px) {
+  .second-line {
+    top: -3969px;
+    left: 6%;
+    z-index: 12;
+    width: 70vw;
+  }
   .main-screen h1 {
     font-size: 68px;
+  }
+  .giraffe {
+    left: 195px;
   }
   .second-part h3 {
     line-height: 35px;
@@ -339,8 +411,62 @@ html, body {
   .polymorpf {
     height: 1750px;
   }
+  .static-morpf img {
+    display: none;
+  }
   .morpf svg {
     width: 145%;
     left: -50%;
+  }
+  .letter-wrapper {
+    top: 313px;
+    left: -210px;
+  }
+}
+@media (min-width: 1440px) {
+  .second-line {
+    top: -4285px;
+    left: -1%;
+    z-index: 12;
+    width: 87vw;
+  }
+  .giraffe {
+    left: 320px;
+  }
+  .second-part {
+    height: 1030px;
+  }
+  .second-part h3 {
+    line-height: 56px;
+    font-size: 40px;
+    width: 586px;
+    margin-bottom: 45px;
+  }
+  .second-part article p {
+    font-size: 33px;
+    line-height: 50px;
+  }
+  .about {
+    background-color: #000;
+    padding: 200px 0 0;
+    height: 660px;
+  }
+  .about article {
+    font-size: 33px;
+    width: 785px;
+    line-height: 50px;
+  }
+  .about article span {
+    font-size: 36px;
+  }
+  .letter-wrapper {
+    top: 800px;
+    left: -46px;
+  }
+  .static-morpf  {
+    display: none;
+  }
+  .morpf svg {
+    top: 2600px;
   }
 }
